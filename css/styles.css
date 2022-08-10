@@ -1,42 +1,107 @@
-body{
+body {
+    color: white;
     text-align: center;
-    background-color: #fff;
-    
+    background: #6190E8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A7BFE8, #6190E8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    
+
+
 }
 
+h3 {
+    color: rgb(66, 63, 63);
+}
+
+p {
+    list-style: 1.5rem;
+    text-align: center;
 
 
+}
 
+.line-break {
+    border: dotted #1a1918 8px;
+    border-bottom: none;
+    width: 5%;
+    margin: 100px auto;
+}
+
+#photo-box {
+    position: relative;
+    min-height: 100vh;
+}
+
+#footer {
+    color: white;
+
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    /* Footer height */
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    /* Footer height */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 7%;
+}
+
+/* .row>div[class*='col-'] {
+    display: flex;
+} */
+
+.textt {
+    width: 5%;
+
+}
 
 
 .overflow {
     position: relative;
     overflow: hidden;
-    
+
 }
-a:hover{
+
+/* a:hover{
     
     text-decoration: underline;
-}
+} */
 .bg-shadow {
-   
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(178, 179, 13, 1) 100%);
-}
-.footer{
-    background-color:rgb(22, 22, 21); 
-    
+    background: #6190E8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A7BFE8, #6190E8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
 }
 
-@media only screen and (min-width: 1000px) {
+.footer {
+    background-color: #1C3879;
+
+}
+
+@media only screen and (max-width: 1000px) {
 
     /* For large screens: */
-        .cardd-lg {
-                width: 25%;
-                padding: 2%;
-                margin-left: 75px;
-            }
-   
+    .cardd-lg {
+        width: 50%;
+        padding: 7%;
+        margin-left: 28.5%;
+        text-align: center;
+    }
+
 }

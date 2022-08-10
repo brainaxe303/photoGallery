@@ -1,74 +1,39 @@
-// // Step 1 - Create object pof XHR
-// const xhr = new XMLHttpRequest()
-
-
-// // const variable = 'Ram'
-// // console.log(Hi my name is ${variable} and I am 20 years old!)
-
-// const url ="https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-09";
-
-//     // Step 2 - Open the porta; of communication b/w client & the server
-//     xhr.open('GET', url)
-
-
-// // document.querySelector('#some-value').addEventListener('click', () => {
-// //     console.log('CLIKCED')
-// // })
-
-
-
-// // Step 3 - Execute the function when the request state changes
-// xhr.onreadystatechange = () => {
- 
-//     if (xhr.readyState === 4 && xhr.status === 200) {
-//         const objectResponse = JSON.parse(xhr.responseText)
-//         console.log(objectResponse)
-//         var output = ''
-//         for (let i = 0; i < objectResponse.length; i++) {
-//             output += `
-//                 <div id="video_box">
-                    
-                    
-//                 <h2>${objectResponse[i].albumId}</h2>
-//                 <h3>${objectResponse[i].id}</h3>
-//                 <p>${objectResponse[i].title}</p>
-//                 <img src="${objectResponse[i].url}"></img>
-//                 <img src="${objectResponse[i].thumbnailUrl}"></img>
-//             </div>
-//             `
-//         }
-//         console.log(output)
-//         document.querySelector('#newsdetails').innerHTML = output
-//     }
-// }
-
-// // Step 4 - Send the request
-// xhr.send()
-
 
 var photos;
 function display_photos() {
-    var main = document.getElementById("video-box");
-    for (var i = 0; i < 12; i++) {
+    var main = document.getElementById("photo-box");
+    for (var i = 0; i < 24; i++) {
         var row = document.createElement("DIV");
-        row.className = "row-m-3";
+        row.className = "col-lg-3 col-md-4 ";
         var col = document.createElement("DIV");
-        col.className = "col-3";
+        col.className = "col-sm-3 card-deck";
         var div = document.createElement("DIV");
         div.className = "card";
         var thumbnail = document.createElement("img")
         var img = document.createElement("img");
-        var tag_h = document.createElement("h1");
-        var tag_t = document.createElement("h3");
+        img.setAttribute("height", "matchparent");
+        img.setAttribute("width", "100%");
+        img.className =" img-fluid img-adjusted";
+        var tag_h = document.createElement("p");
+
+        var tag_t = document.createElement("a");
         var tag_p = document.createElement("P");
+
+ 
 
 
         tag_h.innerHTML = photos[i].title;
+        tag_h.className="card-text";
         thumbnail.src=photos[i].thumbnailUrl;
         // thumbnail.className="fluid card-img-top";
         img.src = photos[i].url;
+
         img.className = "fluid card-img-top";
         tag_t.innerHTML=photos[i].id;
+        tag_t.className="btn btn-dark";
+        tag_t.href="${photos.url}";
+        
+        
         
         // tag_h.innerHTML = movies[i].thumbnailUrl;
 
@@ -80,9 +45,9 @@ function display_photos() {
         
         
         col.appendChild(div);
-        div.appendChild(img);
-        div.appendChild(tag_h);
-        div.appendChild(tag_p);
+        col.appendChild(img);
+        col.appendChild(tag_h);
+        col.appendChild(tag_p);
        
         
 

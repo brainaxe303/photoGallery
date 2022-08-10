@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&family=VT323&display=swap');
 
-html{
+html,
+body {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Poppins',
         sans-serif;
@@ -19,6 +21,32 @@ body {
 
 
 }
+
+.top {
+    --offset: 50px;
+
+    position: sticky;
+    bottom: 20px;
+    margin-right: 10px;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+
+    /* visual styling */
+    text-decoration: none;
+    padding: 15px;
+    font-family: sans-serif;
+    color: #fff;
+    background: rgb(27, 101, 219);
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.top:hover {
+    background-color: rgb(242, 252, 255);
+    color: rgb(18, 3, 3);
+
+}
+
 
 h3 {
     color: rgb(66, 63, 63);
@@ -37,6 +65,7 @@ p {
     width: 5%;
     margin: 100px auto;
 }
+
 .line-breakk {
     border: dotted #1a1918 8px;
     border-bottom: none;
@@ -160,7 +189,7 @@ p {
     .cardd-lg {
         width: 80%;
         padding: 5%;
-        margin-left:12%;
+        margin-left: 12%;
         text-align: center;
     }
 }

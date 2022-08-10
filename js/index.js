@@ -4,9 +4,9 @@ function display_photos() {
     var main = document.getElementById("photo-box");
     for (var i = 0; i < 24; i++) {
         var row = document.createElement("DIV");
-        row.className = "col-lg-3 col-md-4 ";
+        row.className = "col-lg-3 col-md-4 col-sm-6 ";
         var col = document.createElement("DIV");
-        col.className = "col-sm-3 card-deck";
+        col.className = " card-deck";
         var div = document.createElement("DIV");
         div.className = "card";
         var thumbnail = document.createElement("img")

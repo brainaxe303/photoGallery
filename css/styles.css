@@ -34,6 +34,12 @@ p {
     width: 5%;
     margin: 100px auto;
 }
+.line-breakk {
+    border: dotted #1a1918 8px;
+    border-bottom: none;
+    width: 5%;
+    margin: 100px auto;
+}
 
 #photo-box {
     position: relative;
@@ -119,7 +125,7 @@ p {
 
 
 
-.bottom-hoverr  {
+.bottom-hoverr {
     float: center;
     color: #f2f2f2;
     text-align: center;
@@ -128,9 +134,10 @@ p {
     font-size: 17px;
 
 }
-.bottom-hoverr:hover{
-        background-color: #ddd;
-            color: black;
+
+.bottom-hoverr:hover {
+    background-color: #ddd;
+    color: black;
 
 }
 
@@ -144,4 +151,13 @@ p {
         text-align: center;
     }
 
+}
+
+@media only screen and (min-width: 660px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .cardd-lg {
+        width: 80%;
+        padding: 5%;
+        margin-left:12%;
+        text-align: center;
+    }
 }
